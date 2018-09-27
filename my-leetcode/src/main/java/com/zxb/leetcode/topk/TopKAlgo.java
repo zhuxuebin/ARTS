@@ -1,4 +1,4 @@
-package com.sf.boot.myspringboot.topK;
+package com.zxb.leetcode.topk;
 
 /**
  * Created by xuery on 2018/9/22.

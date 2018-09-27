@@ -1,4 +1,4 @@
-package com.sf.boot.myspringboot.topK;
+package com.zxb.leetcode.topk;
 
 import java.util.Random;
 

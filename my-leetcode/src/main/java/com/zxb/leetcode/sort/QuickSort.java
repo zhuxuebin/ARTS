@@ -1,4 +1,4 @@
-package com.zxb.leetcode.topk;
+package com.zxb.leetcode.sort;
 
 import java.util.Random;
 
@@ -8,6 +8,10 @@ import java.util.Random;
  */
 public class QuickSort {
 
+    private QuickSort(){
+
+    }
+
     private static Random random = new Random();
 
     public static void main(String[] args) {
@@ -15,19 +19,18 @@ public class QuickSort {
         for(int i=0;i<100;i++){
             arr[i] = random.nextInt(Integer.MAX_VALUE);
         }
-        QuickSort quickSort = new QuickSort();
-        quickSort.quickSort(arr);
+        QuickSort.quickSort(arr);
         for(int i=0;i<arr.length;i++) {
             System.out.println(arr[i]);
         }
     }
 
-    public void quickSort(int[] arr){
+    public static void quickSort(int[] arr){
         quickSort(arr, 0, arr.length-1);
     }
 
-    private void quickSort(int[] arr, int begin, int end){
-        if(begin >= end){
+    public static void quickSort(int[] arr, int begin, int end){
+        if(begin > end){
             return;
         }
         int p = partition(arr, begin, end);
@@ -35,7 +38,7 @@ public class QuickSort {
         quickSort(arr, p+1, end);
     }
 
-    private int partition(int[] arr, int begin, int end){
+    public static int partition(int[] arr, int begin, int end){
         // 1. select random p between begin and end
         int p = begin + random.nextInt(end+1-begin);
         // 2. move the element less than arr[p] to p's left, ...
@@ -65,7 +68,7 @@ public class QuickSort {
         return i;
     }
 
-    private void swap(int[] arr, int i, int j){
+    private static void swap(int[] arr, int i, int j){
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;

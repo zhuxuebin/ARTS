@@ -141,14 +141,14 @@ public class PalidromeString {
 
         return isPalidromeString;
     }
-}
 
-class Node {
-    Node next = null;
-    char val;
+    static class Node {
+        Node next = null;
+        char val;
 
-    public Node(char val) {
-        this.val = val;
+        public Node(char val) {
+            this.val = val;
+        }
+
     }
-
 }

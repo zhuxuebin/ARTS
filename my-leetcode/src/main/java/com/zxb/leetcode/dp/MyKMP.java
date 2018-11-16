@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 01368080 on 2017/11/16.
+ * Created by xuery on 2017/11/16.
  */
 public class MyKMP {
 

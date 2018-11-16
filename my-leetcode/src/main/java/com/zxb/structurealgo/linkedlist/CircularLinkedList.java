@@ -14,7 +14,7 @@ package com.zxb.structurealgo.linkedlist;
  *
  *  开搞，可以自己举例试一下
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/11/14
  */
 public class CircularLinkedList {

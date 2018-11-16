@@ -19,7 +19,7 @@ package com.zxb.leetcode.dp;
  * <p>
  * 马拉车算法：参考：https://www.jianshu.com/p/2062ae43d79a
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/10/30
  */
 public class LongestPalindromicSubstring5Manchester {

@@ -7,7 +7,7 @@ package com.zxb.structurealgo;
  *  插入元素也直接插入表头；什么时候淘汰元素，当元素个数超过链表容量时，这里暂时不考虑多线程安全的场景
  *
  *  修改：需要将单链表改成双向链表，不然单链表删除尾节点很麻烦，时间复杂度是O（n）
- * @author 01368080
+ * @author xuery
  * @date 2018/11/13
  */
 public class LRUAlgo {

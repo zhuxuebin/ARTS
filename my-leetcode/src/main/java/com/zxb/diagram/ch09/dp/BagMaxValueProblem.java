@@ -21,7 +21,7 @@ import java.util.List;
  * L[i][j]要么取当前第i件商品，则价值为：V1=goods[i]+L[i-1][j-goods[i]],要么不取当前第i件商品, 则价值为V2=L[i-1][j],
  * 最后L[i][j]取max(V1,V2)即可，注意这样可以保证L[i][j]一定是递增的
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/8/9
  */
 public class BagMaxValueProblem {

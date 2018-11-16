@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * 描述：
  *  栈实现浏览器前进、后退、跳转新页面中的操作
- * @author 01368080
+ * @author xuery
  * @date 2018/11/14
  */
 public class BrowserForwardOrBack {

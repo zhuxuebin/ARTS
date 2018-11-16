@@ -5,7 +5,7 @@ package com.zxb.structurealgo.linkedlist;
  *  删除链表的倒数第n个节点
  *
  *  注意边界判断：链表为空，链表只有1、2元素，n的大小取值是否超过范围
- * @author 01368080
+ * @author xuery
  * @date 2018/11/14
  */
 public class RemoveElementOfLinkedList {

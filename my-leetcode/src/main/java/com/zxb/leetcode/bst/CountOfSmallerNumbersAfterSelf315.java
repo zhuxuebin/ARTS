@@ -16,7 +16,7 @@ import java.util.List;
  * 在arr[i]之后小于它的元素个数，这不就是二叉搜索树的左子数个数吗？==>从右往左构建二叉树，每次插入的时候就知道当前元素的左子树个数了
  * 这里还要注意一点：元素有可能是重复的，而二叉搜索树是无重复元素的，这点要考虑好==>
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/8/21
  */
 public class CountOfSmallerNumbersAfterSelf315 {

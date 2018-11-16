@@ -23,7 +23,7 @@ import java.util.*;
  * - 存储最短距离表：一维数组
  * - 存储当前节点的上一节点：map
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/8/10
  */
 public class DijkstraAlgo {

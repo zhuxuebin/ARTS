@@ -17,7 +17,7 @@ package com.zxb.leetcode.dp;
  * 注意点：以一位为中心向两边扩展则为奇数个字母，但也可能以两位相等的往外扩展则为偶数个字母
  * 其实还可以使用马拉车算法，但是真是记不住啊--搞定，思路最重要
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/10/30
  */
 public class LongestPalindromicSubstring5 {

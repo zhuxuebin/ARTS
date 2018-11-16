@@ -11,7 +11,7 @@ import java.util.*;
  *
  * 暴力破解法：n!种选法，选出符合条件的最小集合数即可；n的值较小还好，n值很大的时候就要计算到猴年马月了
  * 近似解法：贪婪算法：每次都从剩余集合列表中选取能够与剩余未选择州交集最多元素的集合，直至覆盖了所有的州
- * @author 01368080
+ * @author xuery
  * @date 2018/8/8
  */
 public class SetCoverProblem {

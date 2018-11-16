@@ -17,7 +17,7 @@ package com.zxb.leetcode.dp;
  *
  * 优化点：dp[i-1]计算出来之后在计算dp[i]用完之后就没用了，所以可以采用两个变量来节约dp数组的空间
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/10/30
  */
 public class MaximumSubarray53 {

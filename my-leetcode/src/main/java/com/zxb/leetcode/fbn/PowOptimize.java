@@ -5,7 +5,7 @@ package com.zxb.leetcode.fbn;
  * 乘方运算优化，O（n）优化为O（log(n)）
  * 具体思路：x^n=x^(n-1)*x可以优化为x^n=x^(n/2)*x^(n/2)
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/10/11
  */
 public class PowOptimize {

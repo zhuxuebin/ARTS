@@ -10,7 +10,7 @@ import java.util.List;
  * 递归两个重要条件：
  * 1.基线条件：截止条件
  * 2.子问题分解
- * @author 01368080
+ * @author xuery
  * @date 2018/7/28
  */
 public class UniqueBST2 {

@@ -4,7 +4,7 @@ package com.zxb.leetcode;
  * 描述：
  *  已知一个数组，数组中除了一个元素只出现一次，其他元素均出现三次；请找出只出现一次的元素
  *  如[1,2,1,1,2,3,2]-->3
- * @author 01368080
+ * @author xuery
  * @date 2018/8/20
  */
 public class SingleNumberII137 {

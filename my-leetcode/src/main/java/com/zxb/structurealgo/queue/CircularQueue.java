@@ -11,7 +11,7 @@ package com.zxb.structurealgo.queue;
  * 3. 删除元素时，先判断队列是否为空，空则删除失败；非空则删除head指向的元素，并且head=(head+1)%n
  * 4. 关键点：如何判断队列为空或者已满，为空：head==tail, 已满：(tail+1)%n == head
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/11/15
  */
 public class CircularQueue {

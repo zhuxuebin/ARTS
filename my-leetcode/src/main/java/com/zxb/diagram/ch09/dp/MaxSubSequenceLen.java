@@ -9,7 +9,7 @@ package com.zxb.diagram.ch09.dp;
  * arr[i][j] = arr[i-1][j-1] + 1   s1[i] == s2[j]
  * arr[i][j] = Max(arr[i-1][j],arr[i][j-1]) s1[i] != s2[j]
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/8/9
  */
 public class MaxSubSequenceLen {

@@ -3,7 +3,7 @@ package com.zxb.leetcode.fbn;
 /**
  * 描述：
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/10/11
  */
 public class FibonacciSequence {

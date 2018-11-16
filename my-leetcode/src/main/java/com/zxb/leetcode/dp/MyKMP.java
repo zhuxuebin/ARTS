@@ -1,16 +1,19 @@
-package com.sf.algo.basic;
+package com.zxb.leetcode.dp;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 01368080 on 2017/11/16.
+ * Created by xuery on 2017/11/16.
  */
 public class MyKMP {
 
     public static void main(String[] args) {
         MyKMP myKMP = new MyKMP();
         System.out.println(myKMP.kmp("BBC ABCDAB ABCDABCDABDE ABCDABD","ABCDABD"));
+        String s1 = "123";
+        String s2 = String.valueOf("123");
+        System.out.println();
     }
 
     /**如果有多个则查找多个

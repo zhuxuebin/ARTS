@@ -18,7 +18,7 @@ import java.util.*;
  * 正确解法：贪婪算法，一种近似算法，只保证尽量贴近最优解
  * 【每次都选取从当前时间开始，结束时间最早的课程】
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/8/8
  */
 public class ClassScheduleProblem {

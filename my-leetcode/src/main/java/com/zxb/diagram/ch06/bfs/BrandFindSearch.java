@@ -13,7 +13,7 @@ import java.util.LinkedList;
  *  实现方法：队列
  *
  *  这里我想了一下：直接采用二叉树的广度有限遍历对该算法举例即可
- * @author 01368080
+ * @author xuery
  * @date 2018/8/10
  */
 public class BrandFindSearch {

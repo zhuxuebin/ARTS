@@ -10,7 +10,7 @@ import java.util.Random;
  * 有多少位就上述循环处理多少次，空间换时间算法
  * for循环时间复杂度，O（n）
  *
- * @author 01368080
+ * @author xuery
  * @date 2018/10/11
  */
 public class BasicSort {

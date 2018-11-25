@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * Created by xuery on 2018/9/22.
- * https://blog.csdn.net/MoreWindows/article/details/6684558--填坑法
+ * https://blog.csdn.net/MoreWindows/article/details/6684558 --填坑法
  */
 public class QuickSort {
 
@@ -44,7 +44,7 @@ public class QuickSort {
         // 2. move the element less than arr[p] to p's left, ...
         int pVal = arr[p];
         //交换随机选择的p与end，转换成选择最后一个元素为基准
-        swap(arr, p, end);
+        ArrayUtil.swap(arr, p, end);
         int i = begin, j = end;
         while(i < j){
             while(i < j && arr[i] <= pVal){
@@ -66,11 +66,5 @@ public class QuickSort {
         }
         arr[i] = pVal;
         return i;
-    }
-
-    private static void swap(int[] arr, int i, int j){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 }

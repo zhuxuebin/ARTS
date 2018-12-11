@@ -37,6 +37,17 @@ public class ArrayUtil {
         System.out.println();
     }
 
+    public static void printCharArray(char[] arr) {
+        if (arr == null || arr.length == 0) {
+            return;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];

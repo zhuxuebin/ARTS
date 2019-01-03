@@ -1,4 +1,4 @@
-package com.zxb.structurealgo;
+package com.zxb.structurealgo.hashtable;
 
 /**
  * 描述：
@@ -77,6 +77,10 @@ public class LRUAlgo {
         }
     }
 
+    /**
+     * 这里并不准确，一般是通过node.key访问，并不是直接告诉node， 需要有个查找的过程，时间复杂度O（n）
+     * @param node
+     */
     public void visit(Node node){
         //第一步将node从链表中删除
         Node preNode = node.pre;

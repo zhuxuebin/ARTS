@@ -1,7 +1,5 @@
 package com.zxb.structurealgo.binaryTree;
 
-import com.zxb.structurealgo.binaryTree.TreeNode;
-
 /**
  * @ClassName GenerateBinaryTreeUtil
  * @Description 实例化一个二叉树公共类
@@ -28,6 +26,23 @@ public class GenerateBinaryTreeUtil {
         node2.right = node4;
         node3.left = node5;
         node3.right = node6;
+        return root;
+    }
+
+    public static TreeNode generateBinarySearchTree(){
+        TreeNode root = new TreeNode(5);
+        TreeNode node2 = new TreeNode(3);
+        TreeNode node3 = new TreeNode(6);
+        TreeNode node4 = new TreeNode(2);
+        TreeNode node5 = new TreeNode(4);
+        TreeNode node6 = new TreeNode(7);
+
+        root.left = node2;
+        root.right = node3;
+        node2.left = node4;
+        node2.right = node5;
+        node3.right = node6;
+
         return root;
     }
 }

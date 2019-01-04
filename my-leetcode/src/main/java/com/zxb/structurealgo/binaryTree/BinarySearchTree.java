@@ -1,18 +1,18 @@
 package com.zxb.structurealgo.binaryTree;
 
 /**
- * @ClassName Solution
+ * @ClassName BinarySearchTree
  * @Description TODO
  * @Author xuery
  * @Date 2019/1/4 19:42
  * @Version 1.0
  */
-class Solution {
+class BinarySearchTree {
 
     public static void main(String[] args) {
         TreeNode root = GenerateBinaryTreeUtil.generateBinarySearchTree();
 
-        Solution solution = new Solution();
+        BinarySearchTree solution = new BinarySearchTree();
         solution.deleteNode(root,3);
         LevelOrder.levelOrder(root);
     }

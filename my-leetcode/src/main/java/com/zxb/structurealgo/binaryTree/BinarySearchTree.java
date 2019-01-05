@@ -67,7 +67,7 @@ class BinarySearchTree {
             //3.1找到p左侧的最右子树且记录它的父节点，后续删除要用
             TreeNode leftMaxParent = p;
             TreeNode leftMax = p.left;
-            if(leftMax.right != null){
+            while(leftMax.right != null){
                 leftMaxParent = leftMax;
                 leftMax = leftMax.right;
             }

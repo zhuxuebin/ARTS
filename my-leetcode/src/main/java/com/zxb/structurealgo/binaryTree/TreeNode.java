@@ -10,8 +10,8 @@ package com.zxb.structurealgo.binaryTree;
 public class TreeNode {
 
     int val;
-    TreeNode left;
-    TreeNode right;
+    public TreeNode left;
+    public TreeNode right;
 
     public TreeNode(int val){
         this.val = val;

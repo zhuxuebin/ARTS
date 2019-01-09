@@ -69,19 +69,23 @@ public class HeapSort {
             if (index >= target / 2) {
                 break;
             }
-            //这里要注意防止n为偶数的时候2*i+2越界（等于startHeapfiy时右子树为空就会越界）
-            if (nums[index] < nums[2 * index + 1] || (2 * index + 2 < target && nums[index] < nums[2 * index + 2])) {
-                int maxChildIndex;
-                if(2*index + 2 < target){
-                    maxChildIndex = nums[2*index+1] > nums[2*index+2]?2*index+1:2*index+2;
-                } else {
-                    maxChildIndex = 2*index + 1;
-                }
-                ArrayUtil.swap(nums, index, maxChildIndex);
-                index = maxChildIndex;
-            } else {
+
+            int maxChildIndex = index;
+            //depressed:这里要注意防止n为偶数的时候2*i+2越界（等于startHeapfiy时右子树为空就会越界）
+            //这里优化后代码判断减少很多
+            if(2*index + 1 < target && nums[maxChildIndex] < nums[2*index+1]){
+                maxChildIndex = 2*index + 1;
+            }
+            if(2*index + 2 < target && nums[maxChildIndex] < nums[2*index +2]){
+                maxChildIndex = 2*index + 2;
+            }
+
+            if(maxChildIndex == index){
                 break;
             }
+
+            ArrayUtil.swap(nums, index, maxChildIndex);
+            index = maxChildIndex;
         }
     }
 

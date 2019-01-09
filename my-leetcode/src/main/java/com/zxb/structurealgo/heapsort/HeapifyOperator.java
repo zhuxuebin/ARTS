@@ -45,7 +45,7 @@ public class HeapifyOperator {
      * 将num先插入到最后一个节点,然后向上堆化
      * <p>
      * 这里不是特别严谨，没有更新实际元素个数
-     *
+     * 伪代码
      * @param arr
      * @param n   实际元素个数，从下标1到n
      * @param num
@@ -76,7 +76,7 @@ public class HeapifyOperator {
 
     /**
      * 这里不是特别严谨，没有更新实际元素个数
-     *
+     * 伪代码
      * @param arr
      * @param n
      */

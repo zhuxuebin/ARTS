@@ -1,6 +1,6 @@
 package com.zxb.leetcode.sort;
 
-import java.util.Random;
+import com.zxb.common.ArrayUtil;
 
 /**
  * 描述：选择排序

@@ -1,9 +1,6 @@
 package com.zxb.structurealgo.recursion;
 
-import com.zxb.leetcode.sort.ArrayUtil;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

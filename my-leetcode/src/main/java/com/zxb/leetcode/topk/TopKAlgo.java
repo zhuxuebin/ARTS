@@ -12,7 +12,7 @@ import java.util.Random;
  * 2. 冒泡排序，每次遍历算出一个值，O（kn）
  * 3. 堆排，O（nlogk）
  * 4. 快排，归并法，O(nlogn)
- * 5. 减治法
+ * 5. 减治法O(n)
  */
 public class TopKAlgo {
 

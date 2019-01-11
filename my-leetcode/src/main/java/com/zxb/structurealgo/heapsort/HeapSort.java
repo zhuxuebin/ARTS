@@ -1,6 +1,6 @@
 package com.zxb.structurealgo.heapsort;
 
-import com.zxb.leetcode.sort.ArrayUtil;
+import com.zxb.common.ArrayUtil;
 
 /**
  * @ClassName HeapSort
@@ -29,81 +29,33 @@ public class HeapSort {
     public static void main(String[] args) {
         int[] nums = {10,7,1,2,4,5,8,3,6};
         HeapSort heapSort = new HeapSort();
-        heapSort.heapSort(nums);
+        heapSort.heapSortAsc(nums);
+        ArrayUtil.printArray(nums);
+
+        heapSort.heapSortDesc(nums);
         ArrayUtil.printArray(nums);
     }
 
-    public void heapSort(int[] nums) {
+    public void heapSortAsc(int[] nums) {
         if (nums == null || nums.length <= 1) {
             return;
         }
         //1.先构建最大堆
-        buildHeap(nums);
+        HeapSortUtil.buildMaxHeap(nums, nums.length);
 
         //2.开始排序，从最后一个点开始，按照删除节点的思路：与堆顶元素先交换、堆化，然后倒数第二点直至遍历完
-        swapTopToRightLocation(nums, nums.length - 1);
+        HeapSortUtil.maxHeapSort(nums, nums.length - 1);
     }
 
-    /**
-     * @param nums
-     * @param maxIndex 需要与堆顶交换的下标值的初始值
-     */
-    private void swapTopToRightLocation(int[] nums, int maxIndex) {
-
-        int target = maxIndex; //当前要与堆顶交换元素的下标值
-        while (target != 0) {
-            ArrayUtil.swap(nums, 0, target);
-
-            //从0往下堆化, target下标对应最后一个有效元素
-            int index = 0;
-            downHeapify(nums, target, index);
-
-            target--;
+    public void heapSortDesc(int[] nums){
+        if (nums == null || nums.length <= 1) {
+            return;
         }
+        //1.先构建最小堆
+        HeapSortUtil.buildMinHeap(nums, nums.length);
 
+        //2.开始排序，从最后一个点开始，按照删除节点的思路：与堆顶元素先交换、堆化，然后倒数第二点直至遍历完
+        HeapSortUtil.minHeapSort(nums, nums.length - 1);
     }
 
-    private void downHeapify(int[] nums, int target, int index) {
-        while (true) {
-            //注意：这时候target对应的数据要么不存在，要么不算
-            if (index >= target / 2) {
-                break;
-            }
-
-            int maxChildIndex = index;
-            //depressed:这里要注意防止n为偶数的时候2*i+2越界（等于startHeapfiy时右子树为空就会越界）
-            //这里优化后代码判断减少很多
-            if(2*index + 1 < target && nums[maxChildIndex] < nums[2*index+1]){
-                maxChildIndex = 2*index + 1;
-            }
-            if(2*index + 2 < target && nums[maxChildIndex] < nums[2*index +2]){
-                maxChildIndex = 2*index + 2;
-            }
-
-            if(maxChildIndex == index){
-                break;
-            }
-
-            ArrayUtil.swap(nums, index, maxChildIndex);
-            index = maxChildIndex;
-        }
-    }
-
-
-    /**
-     * 从右往左构建，每次都从上往下堆化，从非叶子节点开始
-     * 根据实际情况还是从下标0开始存储吧
-     *
-     * @param nums
-     */
-    private void buildHeap(int[] nums) {
-        int n = nums.length;
-
-        int startHeapfiy = n / 2 - 1;
-        for (int i = startHeapfiy; i >= 0; i--) {
-            //从上往下堆化
-            int index = i; //当前需要往下堆化的节点
-            downHeapify(nums, n, index);
-        }
-    }
 }

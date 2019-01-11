@@ -1,6 +1,6 @@
 package com.zxb.structurealgo.heapsort;
 
-import com.zxb.leetcode.sort.ArrayUtil;
+import com.zxb.common.ArrayUtil;
 
 /**
  * @ClassName HeapifyOperator

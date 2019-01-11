@@ -1,4 +1,4 @@
-package com.zxb.leetcode.sort;
+package com.zxb.common;
 
 import java.util.Random;
 

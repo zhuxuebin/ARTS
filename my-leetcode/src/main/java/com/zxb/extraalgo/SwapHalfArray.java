@@ -1,6 +1,6 @@
 package com.zxb.extraalgo;
 
-import com.zxb.leetcode.sort.ArrayUtil;
+import com.zxb.common.ArrayUtil;
 
 /**
  * 描述：对应leetcode:189.Rotate Array,不过仔细读题发现是有区别的

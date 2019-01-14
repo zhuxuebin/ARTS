@@ -9,23 +9,12 @@ package com.zxb.structurealgo.heapsort.mergeSmallFiles;
  */
 public class Element {
 
-    private int fileNum; //哪个文件
+    public int fileNum; //哪个文件
 
-    private int value;  //对应文件中的值
+    public int value;  //对应文件中的值
 
-    public int getFileNum() {
-        return fileNum;
-    }
-
-    public void setFileNum(int fileNum) {
+    public Element(int fileNum, int value) {
         this.fileNum = fileNum;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
         this.value = value;
     }
 }

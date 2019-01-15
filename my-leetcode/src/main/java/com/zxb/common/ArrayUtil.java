@@ -2,6 +2,7 @@ package com.zxb.common;
 
 import com.zxb.structurealgo.heapsort.mergeSmallFiles.Element;
 
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -66,9 +67,15 @@ public class ArrayUtil {
         arr[j] = temp;
     }
 
-    public static void swap(Element[] elements, int i, int j) {
-        Element temp = elements[i];
-        elements[i] = elements[j];
-        elements[j] = temp;
+    public static void swap(Element[] arr, int i, int j) {
+        Element temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static void swap(Map.Entry<Integer, Integer>[] arr, int i, int j) {
+        Map.Entry<Integer, Integer> temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }

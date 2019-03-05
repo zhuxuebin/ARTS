@@ -1,24 +1,30 @@
 package com.zxb.structurealgo.mapreduce;
 
 /**
- * @ClassName ImportantReversePairs
+ * @ClassName ReversePairsByMergeSort
  * @Description 493. Reverse Pairs
+ *
+ * 题目描述：求重要逆序对个数，nums[i] > 2*nums[j], (i < j),则nums[i]与nums[j]互为重要逆序对
  * @Author xuery
  * @Date 2019/3/1 21:53
  * @Version 1.0
  */
-class ImportantReversePairs {
+class ReversePairsByMergeSort {
 
     public static void main(String[] args) {
         int[] nums = {2147483647,2147483647,-2147483647,-2147483647,-2147483647,2147483647};
-        ImportantReversePairs reversePairs = new ImportantReversePairs();
-        int resSum = reversePairs.reversePairs(nums);
+        ReversePairsByMergeSort reversePairs = new ReversePairsByMergeSort();
+        int resSum = reversePairs.reversePairsByMergeSort(nums);
         System.out.println(resSum);
+
+        int x = 2147483647;
+        long ll = (long)2*x+1;
+        System.out.println(ll);
     }
 
     private int sum = 0;
 
-    public int reversePairs(int[] nums) {
+    public int reversePairsByMergeSort(int[] nums) {
 
         if(nums == null || nums.length <= 1){
             return 0;

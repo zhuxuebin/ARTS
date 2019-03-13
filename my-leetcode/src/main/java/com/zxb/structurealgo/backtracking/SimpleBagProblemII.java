@@ -1,21 +1,26 @@
 package com.zxb.structurealgo.backtracking;
 
 /**
- * @ClassName ZeroOneBagProblem
- * @Description 基础0-1背包问题，给定一个背包，最多可以装W重量的物品，有n个重量不等的物品且物品都不可分割，
- * 请问背包可以装物品的最大重量是多少？
+ * @ClassName SimpleBagProblemII
+ * @Description 升级版背包问题，共有n件物品的重量，每件物品有一个价格；给定一个背包最多装w重的物品，问怎么装装的价值最大
+ *
+ * 比如goods={2,2,3,4,5} prices={2,3,4,5,6} w=10
+ *
+ * 选第1件，第2件，第4件， 重量：2+3+5=10,价值：3+4+6=13
+ *
+ * 回溯法依然可以解决
  * @Author xuery
  * @Date 2019/3/5 11:37
  * @Version 1.0
  */
-public class ZeroOneBagProblem {
+public class SimpleBagProblemII {
 
     public static void main(String[] args){
         int w = 100;
         int[] goods = new int[]{10,15,30,30,50};
-        ZeroOneBagProblem zeroOneBagProblem = new ZeroOneBagProblem();
-        zeroOneBagProblem.zeroOneBag(0, 0, w, goods);
-        System.out.println(zeroOneBagProblem.maxW);
+        SimpleBagProblemII simpleBagProblem = new SimpleBagProblemII();
+        simpleBagProblem.zeroOneBag(0, 0, w, goods);
+        System.out.println(simpleBagProblem.maxW);
     }
 
     /**

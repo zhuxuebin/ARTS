@@ -16,33 +16,36 @@ package com.zxb.structurealgo.backtracking;
 public class SimpleBagProblemII {
 
     public static void main(String[] args){
-        int w = 100;
-        int[] goods = new int[]{10,15,30,30,50};
+        int w = 10;
+        int[] goods = new int[]{2,2,3,4,5};
+        int[] prices = new int[]{2,3,4,5,6};
         SimpleBagProblemII simpleBagProblem = new SimpleBagProblemII();
-        simpleBagProblem.zeroOneBag(0, 0, w, goods);
-        System.out.println(simpleBagProblem.maxW);
+        simpleBagProblem.zeroOneBag(0, 0,0, w, goods,prices);
+        System.out.println(simpleBagProblem.maxP);
     }
 
     /**
      * 求解思路：回溯法，还是全部试一遍，看符合条件的最大重量
      * @param cw 背包中现在的重量cw
+     * @param cp 当前背包已装物品总价值
      * @param index 第index个物品，装or不装
      * @param w 背包所能装的最大重量
      * @param goods n个物品的重量值
+     * @param prices n个物品的价值
      */
-    int maxW = Integer.MIN_VALUE;
-    public void zeroOneBag(int cw, int index, int w, int[] goods){
+    int maxP = Integer.MIN_VALUE;
+    public void zeroOneBag(int cw,int cp, int index, int w, int[] goods, int[] prices){
 
         if(index >= goods.length || cw == w){
             //遍历完或者已经达到包所容纳的最大重量则结束
-            maxW = Math.max(maxW, cw);
+            maxP = Math.max(maxP, cp);
             return;
         }
 
-        zeroOneBag(cw, index+1, w, goods); //当前goods[index]不放入背包
+        zeroOneBag(cw, cp,index+1, w, goods,prices); //当前goods[index]不放入背包
         if(cw + goods[index] <= w){
             //剪枝法
-            zeroOneBag(cw+goods[index], index+1, w, goods);
+            zeroOneBag(cw+goods[index], cp+prices[index], index+1, w, goods,prices);
         }
 
     }

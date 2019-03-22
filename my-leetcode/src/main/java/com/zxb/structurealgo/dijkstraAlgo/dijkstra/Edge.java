@@ -1,4 +1,4 @@
-package com.zxb.structurealgo.dijkstra;
+package com.zxb.structurealgo.dijkstraAlgo.dijkstra;
 
 /**
  * @ClassName Edge

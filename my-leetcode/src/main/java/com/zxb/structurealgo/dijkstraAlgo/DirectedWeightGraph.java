@@ -1,4 +1,4 @@
-package com.zxb.structurealgo.dijkstraAlgo.dijkstra;
+package com.zxb.structurealgo.dijkstraAlgo;
 
 import java.util.LinkedList;
 

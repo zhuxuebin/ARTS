@@ -1,4 +1,4 @@
-package com.zxb.structurealgo.dijkstraAlgo.dijkstra;
+package com.zxb.structurealgo.dijkstraAlgo;
 
 
 import org.apache.commons.collections4.CollectionUtils;

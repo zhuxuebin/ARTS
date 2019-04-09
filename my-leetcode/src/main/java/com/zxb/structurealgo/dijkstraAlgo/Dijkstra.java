@@ -21,10 +21,10 @@ import java.util.*;
 public class Dijkstra {
 
     public static void main(String[] args) {
-        DirectedWeightGraph graph = DirectWeightGraphGenUtil.directedWeightGraphGen1();
+        DirectedWeightGraph graph = DirectWeightGraphGenUtil.directedWeightGraphGen2();
 
         Dijkstra dijkstra = new Dijkstra();
-        List<Integer> resultList = dijkstra.dijkstraAlgo(graph,0,5);
+        List<Integer> resultList = dijkstra.dijkstraAlgo(graph,2,5);
         System.out.println(resultList);
     }
 

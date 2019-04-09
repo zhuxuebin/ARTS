@@ -1,23 +1,23 @@
-package com.zxb.structurealgo.dijkstraAlgo;
+package com.zxb.structurealgo.AStarAlgo49;
 
 
 /**
- * @ClassName DirectWeightGraphGenUtil
+ * @ClassName AStarGraphGenUtil
  * @Description 拓扑图生成类
  * @Author xuery
  * @Date 2019/3/21 10:56
  * @Version 1.0
  */
-public class DirectWeightGraphGenUtil {
+public class AStarGraphGenUtil {
 
 
     /**
      *
      * @return
      */
-    public static DirectedWeightGraph directedWeightGraphGen1(){
+    public static AStarGraph aStarGraphGen1(){
 
-        DirectedWeightGraph graph = new DirectedWeightGraph(6);
+        AStarGraph graph = new AStarGraph(6);
 
         graph.addEdge(0,1,1);
         graph.addEdge(0,2,3);
@@ -28,12 +28,19 @@ public class DirectWeightGraphGenUtil {
         graph.addEdge(3,5,5);
         graph.addEdge(4,5,2);
 
+        graph.addVertx(0,0,0);
+        graph.addVertx(1,0,0);
+        graph.addVertx(2,0,0);
+        graph.addVertx(3,0,0);
+        graph.addVertx(4,0,0);
+        graph.addVertx(5,0,0);
+
         return graph;
     }
 
-    public static DirectedWeightGraph directedWeightGraphGen2(){
+    public static AStarGraph aStarGraphGen2(){
 
-        DirectedWeightGraph graph = new DirectedWeightGraph(6);
+        AStarGraph graph = new AStarGraph(6);
 
         graph.addEdge(2,0,4);
         graph.addEdge(2,1,2);
@@ -43,6 +50,13 @@ public class DirectWeightGraphGenUtil {
         graph.addEdge(2,4,5);
         graph.addEdge(3,5,6);
         graph.addEdge(4,5,7);
+
+        graph.addVertx(0,0,0);
+        graph.addVertx(1,1,1);
+        graph.addVertx(2,2,2);
+        graph.addVertx(3,3,3);
+        graph.addVertx(4,4,4);
+        graph.addVertx(5,5,5);
 
         return graph;
     }

@@ -17,7 +17,7 @@ public class ListSample {
 
         List<String> list2 = new ArrayList<>(Arrays.asList("1","2","3"));
 
-        list2.removeAll(list1);
+        list2.retainAll(list1);
         System.out.println(list2);
 
         Deque<Integer> queue = new LinkedList<>();
@@ -28,5 +28,7 @@ public class ListSample {
         queue.poll();
         queue.pollLast();
         System.out.println(queue.size());
+
+        System.out.println(System.currentTimeMillis());
     }
 }

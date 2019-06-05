@@ -12,4 +12,18 @@ package com.zxb.structurealgo.practice.day05.heap;
  */
 public class PriorityQueue {
 
+    public Element poll(){
+        return null;
+    }
+}
+
+class Element{
+    private int priority;
+
+    private String key;
+
+    public Element(int priority, String key){
+        this.priority = priority;
+        this.key = key;
+    }
 }

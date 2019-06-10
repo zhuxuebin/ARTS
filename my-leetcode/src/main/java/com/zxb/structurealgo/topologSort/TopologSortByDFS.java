@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * @ClassName TopologSortByDFS
  * @Description 深度优先搜索遍历，基本思想：递归思路，先求出逆邻接表，逆邻接表中s->t表示s依赖于t，t要先输出
- * 按照这种思路，我们先输出递归输出当前节点的后继节点，再输出当前节点即可
+ * 按照这种思路，我们先递归输出当前节点的后继节点，再输出当前节点即可
  * @Author xuery
  * @Date 2019/3/21 12:44
  * @Version 1.0

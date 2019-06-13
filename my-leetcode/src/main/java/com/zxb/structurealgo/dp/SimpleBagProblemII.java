@@ -106,29 +106,33 @@ public class SimpleBagProblemII {
         int n = goods.length;
 
         int[][] dp = new int[n][w + 1];
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j <= w; j++) {
+//                dp[i][j] = -1;
+//            }
+//        }
+//        //初始化第一个物品装or不装
+//        dp[0][0] = 0;
+//        if (goods[0] <= w) {
+//            dp[0][goods[0]] = prices[0];
+//        }
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= w; j++) {
-                dp[i][j] = -1;
-            }
-        }
-        //初始化第一个物品装or不装
-        dp[0][0] = 0;
-        if (goods[0] <= w) {
-            dp[0][goods[0]] = prices[0];
-        }
-        for (int i = 1; i < n; i++) {
 
-            //不取goods[i]
-            for (int j = 0; j <= w; j++) {
-                if (dp[i - 1][j] != -1) {
-                    dp[i][j] = dp[i - 1][j];
+            if(i == 0){
+                for(int j=1;j<=w;j++) {
+                    if(j >= goods[0]) {
+                        dp[i][j] = prices[i];
+                    }
                 }
+                continue;
             }
 
-            //取goods[i]
-            for (int j = 0; j <= w - goods[i]; j++) {
-                if (dp[i - 1][j] != -1 && j + goods[i] <= w) {
-                    dp[i][j + goods[i]] = Math.max(dp[i][j + goods[i]],dp[i - 1][j] + prices[i]);//todo 这里可能存在覆盖，要取大值
+            for (int j = 1; j <= w; j++) {
+
+                if(j - goods[i] >= 0) {
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - goods[i]] + prices[i]);
+                } else {
+                    dp[i][j] = dp[i-1][j];
                 }
             }
         }
